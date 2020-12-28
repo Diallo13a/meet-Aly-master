@@ -1,0 +1,16 @@
+
+  <div class="card ml-4" style="width: 20rem;">
+    <img class="card-img-top" [src]="b.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"> {{ b.title | uppercase }}</h5>
+      <p class="card-text">
+          {{ b.description }}
+      </p>
+      <hr>
+        <!-- <span class="float-left btn btn-sm btn-outline-danger" disabled> {{ UtilesService.numberSeparator(b.price, '.') }} FCFA</span> -->
+        <span class="float-left btn btn-sm btn-outline-danger" disabled> {{ b.price | separator: '.'}} FCFA</span>
+
+        <br><span class="ml-2">{{ b.createAt | date | timeleft }}</span>
+      <a href="#" class="btn btn-sm btn-primary float-right" [routerLink]="['/biens',b.id]">Détails</a>
+    </div>
+</div>
