@@ -18,6 +18,9 @@ import { SearchPipe } from './pipes/search.pipe';
 import {RouterModule, Routes} from '@angular/router';
 import { ReservationsBienComponent } from './biens/reservations-bien/reservations-bien.component';
 import {EditReservationComponent} from './reservations-bien/edit-reservation/edit-reservation.component';
+import { ErrorsComponent } from './errors/errors.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { RegisterComponent } from './connexion/register/register.component';
 
 
 
@@ -36,6 +39,9 @@ import {EditReservationComponent} from './reservations-bien/edit-reservation/edi
     TimeleftPipe,
     SearchPipe,
     ReservationsBienComponent,
+    ErrorsComponent,
+    ConnexionComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

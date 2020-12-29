@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../auth.service";
 
 @Component({
   selector: 'app-jumbutrum',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumbutrumComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService  ) { }
 
   ngOnInit(): void {
   }
 
+  onLogin() {
+    this.authService.login('');
+  }
+
+  onLogout() {
+    this.authService.logout();
+  }
 }
