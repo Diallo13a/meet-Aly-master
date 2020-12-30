@@ -9,7 +9,17 @@ import {NgForm} from '@angular/forms';
 export class ConnexionComponent implements OnInit {
   @ViewChild('loginForm') myForm: NgForm;
   constructor() { }
-
+  proposerEmail(): any{
+    // Mettre des valeurs par defaut
+    const myEmail = 'ningaly@gmail.com';
+    this.myForm.setValue({
+      username: myEmail,
+      password: ''
+    });
+    this.myForm.form.patchValue({
+      username: 'azerty'
+    });
+  }
   ngOnInit(): void {
   }
   // onSubmit(form: HTMLFontElement) {
@@ -20,7 +30,9 @@ export class ConnexionComponent implements OnInit {
   //   console.log(form.value.username);
   //
   // }
-  onSubmit() {
-    console.log(this.myForm.valid);
+  onSubmit(loginForm: NgForm): any {
+    alert('email: ' + this.myForm.value.username);
+    this.myForm.reset();
+    // console.log(this.myForm.value);
   }
 }

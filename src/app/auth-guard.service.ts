@@ -15,12 +15,15 @@ export class AuthGuardService implements CanActivate, CanActivateChild{
         if (authenticated){
           return true;
         }else{
-          this.router.navigate(['/login']);
+          this.router.navigate(['']);
           return false;
         }
       }
     );
   }
+  // ngModel : no binding
+  // [ngModel] : one way binding
+  // [(ngModel)] : two ways binding
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     return this.canActivate(childRoute, state);
   }
