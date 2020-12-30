@@ -7,9 +7,9 @@ import {ReservationsBienComponent} from './biens/reservations-bien/reservations-
 import {EditReservationComponent} from './reservations-bien/edit-reservation/edit-reservation.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AuthGuardService} from './auth-guard.service';
-import {ErrorsComponent} from "./errors/errors.component";
-import {BienResolverService} from "./bien-resolver.service";
-import {ConnexionComponent} from "./connexion/connexion.component";
+import {ErrorsComponent} from './errors/errors.component';
+import {BienResolverService} from './bien-resolver.service';
+import {ConnexionComponent} from './connexion/connexion.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/biens', pathMatch: 'full'},
