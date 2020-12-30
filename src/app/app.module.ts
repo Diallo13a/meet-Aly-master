@@ -46,8 +46,8 @@ import { RegisterComponent } from './connexion/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule, // pour les templates draven
+    ReactiveFormsModule // pour les rective-forms
   //  RouterModule.forRoot(appRoutes)
   ],
   providers: [],
