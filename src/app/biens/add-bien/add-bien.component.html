@@ -24,7 +24,8 @@
           placeholder="Entrer le libellé du bien"
           [formControlName]="'title'"
         >
-        <small class="blockquote-footer">50 caractères max</small>
+        <small class="blockquote-footer" *ngIf="!bienForm.get('title').errors['titleForbidden']">50 caractères max</small>
+        <small class="text-danger" >Please enter another word, this one is forbidden!</small>
         <small class="text-danger" *ngIf="!bienForm.get('title').valid && bienForm.get('title').touched">Please enter a valid title</small>
       </div>
       <div class="form-group">
